@@ -15,7 +15,7 @@ class _IntroScreenState extends State<IntroScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       // backgroundColor: Colors.grey[300],
-      backgroundColor: const Color.fromARGB(255, 234, 84, 38),
+
       body: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
