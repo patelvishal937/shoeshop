@@ -13,7 +13,7 @@ class CartItem extends StatefulWidget {
 
 class _CartItemState extends State<CartItem> {
   void removeItemFromCart(Shoe shoe) {
-    Provider.of<cart>(context, listen: false).removeItemcCart(widget.shoe);
+    Provider.of<Cart>(context, listen: false).removeItemcCart(widget.shoe);
   }
 
   @override

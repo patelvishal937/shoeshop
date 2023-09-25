@@ -3,7 +3,6 @@ import 'package:provider/provider.dart';
 import 'package:shoes_shop/models/cartModel.dart';
 import 'package:shoes_shop/models/shoeModel.dart';
 import 'package:shoes_shop/widgets/ShoeTile.dart';
-import 'package:velocity_x/velocity_x.dart';
 
 class ShopScreen extends StatefulWidget {
   const ShopScreen({super.key});
@@ -15,20 +14,20 @@ class ShopScreen extends StatefulWidget {
 class _ShopScreenState extends State<ShopScreen> {
   // adding the shoe to the cart
   void addToShoeTile(Shoe shoe) {
-    Provider.of<cart>(context, listen: false).addItemInCart(shoe);
+    Provider.of<Cart>(context, listen: false).addItemInCart(shoe);
 
     // aleart the user that the list is add in cart
     showDialog(
         context: context,
         builder: (context) => const AlertDialog(
               title: Text("Successfully added"),
-              content: Text("cheack your cart"),
+              content: Text("cheak your cart"),
             ));
   }
 
   @override
   Widget build(BuildContext context) {
-    return Consumer<cart>(
+    return Consumer<Cart>(
         builder: (context, value, child) => Column(
               children: [
                 // search bar
@@ -66,7 +65,7 @@ class _ShopScreenState extends State<ShopScreen> {
                     ),
                   ),
                 ),
-
+                const SizedBox(height: 10),
                 // Hot pics
 
                 Padding(
@@ -93,13 +92,13 @@ class _ShopScreenState extends State<ShopScreen> {
                   ),
                 ),
 
-                const SizedBox(height: 10),
+                const SizedBox(height: 30),
 
                 // shoe tile
 
                 Expanded(
                   child: ListView.builder(
-                    itemCount: 4,
+                    itemCount: value.getShoeList().length,
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
                       // get a shoe
@@ -113,8 +112,8 @@ class _ShopScreenState extends State<ShopScreen> {
                   ),
                 ),
 
-                // devider
-
+                // devider 
+              
                 const Padding(
                     padding: EdgeInsets.only(top: 25),
                     child: Divider(

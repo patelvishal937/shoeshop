@@ -1,40 +1,44 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:shoes_shop/models/shoeModel.dart';
 
-class cart extends ChangeNotifier {
+class Cart extends ChangeNotifier {
   // list item for sale Shoes
 
   List<Shoe> shoesList = [
     Shoe(
-      name: "one",
+      name: "puma",
       price: '236',
       imgPath: "assets/images/img1.png",
-      descreption: "Shoe is the ",
+      descreption:
+          " Unleash your athletic potential with responsive cushioning, breathable mesh, and exceptional traction.",
     ),
     Shoe(
-      name: "one",
+      name: "puma motorsport",
       price: '236',
       imgPath: "assets/images/img2.png",
-      descreption: "Shoe is the ",
+      descreption:
+          "Elevate your style with timeless suede classics offering comfort and grip for any occasion.",
     ),
+    // Shoe(
+    //   name: "one",
+    //   price: '236',
+    //   imgPath: "assets/images/img3.png",
+    //   descreption:
+    //       "Embrace street-style chic with lightweight, retro-inspired kicks featuring shock-absorbing comfort.",
+    // ),
     Shoe(
-      name: "one",
-      price: '236',
-      imgPath: "assets/images/img3.png",
-      descreption: "Shoe is the ",
-    ),
-    Shoe(
-      name: "one",
+      name: "puma lightweight",
       price: '236',
       imgPath: "assets/images/img4.png",
-      descreption: "Shoe is the ",
+      descreption:
+          "Achieve peak performance in these adaptable, knitted trainers built for stability and responsiveness. ",
     ),
     Shoe(
-      name: "one",
+      name: "puma magical",
       price: '236',
       imgPath: "assets/images/img5.png",
-      descreption: "Shoe is the ",
+      descreption:
+          "Step up your fashion game with chunky platform soles and sleek leather in the trendsetting Cali sneakers.",
     ),
   ];
 

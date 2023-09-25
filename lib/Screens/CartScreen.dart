@@ -1,11 +1,7 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shoes_shop/models/cartModel.dart';
 import 'package:shoes_shop/models/shoeModel.dart';
-import 'package:velocity_x/velocity_x.dart';
-
 import '../widgets/cartItem.dart';
 
 class CartScreen extends StatefulWidget {
@@ -18,9 +14,9 @@ class CartScreen extends StatefulWidget {
 class _CartScreenState extends State<CartScreen> {
   @override
   Widget build(BuildContext context) {
-    return Consumer<cart>(
+    return Consumer<Cart>(
       builder: (context, value, child) => Padding(
-        padding: EdgeInsets.symmetric(horizontal: 25),
+        padding: const EdgeInsets.symmetric(horizontal: 25),
         child: Column(
           children: [
             // title
@@ -34,9 +30,7 @@ class _CartScreenState extends State<CartScreen> {
 
             // Expand size
 
-            SizedBox(
-              height: 10,
-            ),
+            const SizedBox(height: 10),
             //Shoes item
 
             Expanded(

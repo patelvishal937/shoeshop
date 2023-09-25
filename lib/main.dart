@@ -14,13 +14,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => cart(),
+      create: (context) => Cart(),
       builder: (context, child) => MaterialApp(
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           scaffoldBackgroundColor: Colors.grey[300],
         ),
-        home: IntroScreen(),
+        home: const IntroScreen(),
       ),
     );
   }

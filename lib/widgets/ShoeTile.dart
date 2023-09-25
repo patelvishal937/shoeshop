@@ -9,8 +9,8 @@ class ShoeTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 25),
-      margin: EdgeInsets.only(left: 25),
+      padding: const EdgeInsets.only(left: 25),
+      margin: const EdgeInsets.only(left: 25),
       width: 280,
       decoration: BoxDecoration(
         color: Colors.grey[100],
@@ -21,6 +21,7 @@ class ShoeTile extends StatelessWidget {
         children: [
           // Shoe pic
           ClipRect(child: Image.asset(shoe.imgPath)),
+
           // Shoe description
           Text(
             shoe.descreption,
@@ -55,6 +56,7 @@ class ShoeTile extends StatelessWidget {
               ),
 
               // button to add cart
+
               GestureDetector(
                 onTap: onTap,
                 child: Container(
